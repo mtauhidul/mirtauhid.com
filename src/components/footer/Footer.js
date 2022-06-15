@@ -1,12 +1,30 @@
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-scroll';
+import { subscribe } from '../../api/api';
 import Logo from '../../images/logo.png';
 import CtaSection from '../ctaSection/ctaSection';
 
-const SubmitHandler = (e) => {
-  e.preventDefault();
-};
-
 const Footer = (props) => {
+  const [email, setEmail] = useState('');
+
+  const clearForm = () => {
+    document.getElementById('subscribe-form').reset();
+  };
+
+  const SubmitHandler = async (e) => {
+    e.preventDefault();
+    clearForm();
+
+    const response = await subscribe(email);
+    console.log(response);
+    if (response) {
+      toast.success('Subscribed successfully!');
+    } else {
+      toast.error('Something went wrong! Please try again');
+    }
+  };
+
   return (
     <footer className='wpo-site-footer'>
       <CtaSection />
@@ -28,29 +46,14 @@ const Footer = (props) => {
                 <div className='social-icons'>
                   <ul>
                     <li>
-                      <Link to='/'>
-                        <i className='ti-facebook'></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/'>
-                        <i className='ti-twitter-alt'></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/'>
+                      <a href='https://www.linkedin.com/in/mirtauhid'>
                         <i className='ti-linkedin'></i>
-                      </Link>
+                      </a>
                     </li>
                     <li>
-                      <Link to='/'>
-                        <i className='ti-pinterest'></i>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to='/'>
-                        <i className='ti-vimeo-alt'></i>
-                      </Link>
+                      <a href='https://github.com/mtauhidul'>
+                        <i className='ti-github'></i>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -127,9 +130,10 @@ const Footer = (props) => {
                   Must explain to you how all this mistaken idea pleasure born
                   and give you a complete account.
                 </p>
-                <form onSubmit={SubmitHandler}>
+                <form id='subscribe-form' onSubmit={SubmitHandler}>
                   <div className='input-1'>
                     <input
+                      onChange={(e) => setEmail(e.target.value)}
                       type='email'
                       className='form-control'
                       placeholder='Email Address *'
