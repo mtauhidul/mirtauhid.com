@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import SectionTitle from '../SectionTitle/SectionTitle';
 
 const Pricing = (props) => {
@@ -40,7 +40,9 @@ const Pricing = (props) => {
                       <li>Responsive</li>
                       <li>Vercel</li>
                     </ul>
-                    <Link to='/'>CHOOSE PLAN</Link>
+                    <Link spy={true} smooth={true} duration={500} to='contact'>
+                      CHOOSE PLAN
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -70,7 +72,9 @@ const Pricing = (props) => {
                       <li>Responsive</li>
                       <li>Vercel</li>
                     </ul>
-                    <Link to='/'>CHOOSE PLAN</Link>
+                    <Link spy={true} smooth={true} duration={500} to='contact'>
+                      CHOOSE PLAN
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -102,7 +106,9 @@ const Pricing = (props) => {
                       <li>Responsive</li>
                       <li>Heroku</li>
                     </ul>
-                    <Link to='/'>CHOOSE PLAN</Link>
+                    <Link spy={true} smooth={true} duration={500} to='contact'>
+                      CHOOSE PLAN
+                    </Link>
                   </div>
                 </div>
               </div>
