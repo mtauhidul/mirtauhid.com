@@ -9,7 +9,12 @@ const ContactArea = (props) => {
       <div className='wpo-wpo-contact-form-map'>
         <div className='container'>
           <div className='row'>
-            <SectionTitle Title={'Let’s Talk'} />
+            <SectionTitle
+              Title={'Let’s Talk'}
+              description={
+                "Have a plan? Just keep an eye on your email. Don't hesitate to ask any questions. I will reply to you very soon."
+              }
+            />
           </div>
           <div className='row'>
             <div className='co-lg-10 offset-lg-1  col-12'>

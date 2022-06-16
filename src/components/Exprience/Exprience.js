@@ -15,7 +15,12 @@ const Exprience = (props) => {
   return (
     <div className='wpo-work-area section-padding'>
       <div className='container'>
-        <SectionTitle Title={'My Work Experience'} />
+        <SectionTitle
+          Title={'My Work Experience'}
+          description={
+            'During my development career, I have worked with many clients on different projects in which applications run successfully worldwide.'
+          }
+        />
         <div className='wpo-work-wrap'>
           {Expriences.map((exprience, exp) => (
             <div className='wpo-work-item' key={exp}>

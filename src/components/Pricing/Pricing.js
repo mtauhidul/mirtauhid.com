@@ -7,7 +7,12 @@ const Pricing = (props) => {
       <div className='container'>
         <div className='row'>
           <div className='row justify-content-center'>
-            <SectionTitle Title={'Pricing Plan'} />
+            <SectionTitle
+              Title={'Pricing Plan'}
+              description={
+                'Here are the pricing plans for my services. For custom applications, I prefer to discuss first for better pricing estimations.'
+              }
+            />
           </div>
         </div>
         <div className='wpo-pricing-wrap'>
