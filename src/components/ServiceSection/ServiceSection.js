@@ -1,4 +1,3 @@
-import { Button } from '@material-ui/core';
 import classnames from 'classnames';
 import React, { useState } from 'react';
 import { Nav, NavItem, NavLink, TabContent, TabPane } from 'reactstrap';
@@ -31,7 +30,12 @@ const ServiceSection = (props) => {
       className={`wpo-service-area section-padding ${props.sClass}`}
       id='service'>
       <div className='container'>
-        <SectionTitle Title={'Services'} />
+        <SectionTitle
+          Title={'Services'}
+          description={
+            'I have categorized my services into two types. I also worked with full stack applications, serverless systems, and many more.'
+          }
+        />
         <div className='wpo-service-wrap'>
           <Nav tabs>
             <NavItem>
@@ -64,11 +68,6 @@ const ServiceSection = (props) => {
                       </div>
                       <h2>{service.sTitle}</h2>
                       <p>{service.description}</p>
-                      <Button
-                        className='btn'
-                        onClick={() => handleClickOpen(service)}>
-                        Learn More
-                      </Button>
                     </div>
                   </div>
                 ))}
@@ -84,11 +83,6 @@ const ServiceSection = (props) => {
                       </div>
                       <h2>{service.sTitle}</h2>
                       <p>{service.description}</p>
-                      <Button
-                        className='btn'
-                        onClick={() => handleClickOpen(service)}>
-                        Learn More
-                      </Button>
                     </div>
                   </div>
                 ))}
@@ -104,11 +98,6 @@ const ServiceSection = (props) => {
                       </div>
                       <h2>{service.sTitle}</h2>
                       <p>{service.description}</p>
-                      <Button
-                        className='btn'
-                        onClick={() => handleClickOpen(service)}>
-                        Learn More
-                      </Button>
                     </div>
                   </div>
                 ))}

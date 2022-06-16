@@ -40,7 +40,7 @@ const Services = [
     sImgS: sgImgS1,
     sTitle: 'Design to Code',
     description:
-      'I can translate your provided design into code that the idea will convert into the actual web application.',
+      'I can translate your provided design into code that the idea will convert into an actual web application.',
     des2: 'Lacus, etiam sed est eu tempus need Temer diam congue laoret .',
     des3: 'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
     icon: 'flaticon-vector',
@@ -52,7 +52,7 @@ const Services = [
     sImgS: brImgS1,
     sTitle: 'Website Redesign',
     description:
-      'Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.',
+      'I can help you to revamp your old website. It will be modernized, optimized and use new features and technologies.',
     des2: 'Lacus, etiam sed est eu tempus need Temer diam congue laoret .',
     des3: 'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
     icon: 'flaticon-palette',
@@ -64,7 +64,7 @@ const Services = [
     sImgS: uxImgS1,
     sTitle: 'API Integration',
     description:
-      'Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.',
+      'I will integrate any API into your application using the most efficient asynchronous way following all the best practices.',
     des2: 'Lacus, etiam sed est eu tempus need Temer diam congue laoret .',
     des3: 'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
     icon: 'flaticon-add',
@@ -76,7 +76,7 @@ const Services = [
     sImgS: dvImgS1,
     sTitle: 'Back End Server',
     description:
-      'Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.',
+      'Our developed back end servers are efficient, robust, and well optimized. Highly scalable servers are well secured too.',
     des2: 'Lacus, etiam sed est eu tempus need Temer diam congue laoret .',
     des3: 'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
     icon: 'flaticon-coding',
@@ -88,7 +88,7 @@ const Services = [
     sImgS: adImgS1,
     sTitle: 'Database Design',
     description:
-      'Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.',
+      'I prefer to use latest document databases. I design the database following the best data structure based on the application.',
     des2: 'Lacus, etiam sed est eu tempus need Temer diam congue laoret .',
     des3: 'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
     icon: 'flaticon-app-development',
@@ -100,7 +100,7 @@ const Services = [
     sImgS: swImgS1,
     sTitle: 'Serverless System',
     description:
-      'Explain to you how all this mistaken idea of denouncing pleasure born and give you complete account the system.',
+      'Serverless Systems are free from server-related hassles where applications still get better service with real-time database.',
     des2: 'Lacus, etiam sed est eu tempus need Temer diam congue laoret .',
     des3: 'One way to categorize the activities is in terms of the professional’s area of expertise such as competitive analysis, corporate strategy the activities',
     icon: 'flaticon-smartphone',
