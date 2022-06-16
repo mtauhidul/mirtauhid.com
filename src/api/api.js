@@ -8,7 +8,6 @@ export const subscribe = async (data) => {
     const docRef = await addDoc(collection(db, 'subscribers'), {
       email: data,
     });
-    console.log('Document written with ID: ', docRef.id);
     if (docRef.id) {
       return true;
     } else {

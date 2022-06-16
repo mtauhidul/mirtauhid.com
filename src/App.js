@@ -1,13 +1,21 @@
-import { Toaster } from 'react-hot-toast';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 import logo from './logo.svg';
 
 function App() {
   return (
     <div className='App'>
-      <div>
-        <Toaster position='bottom-left' reverseOrder={false} />
-      </div>
+      <ToastContainer
+        position='bottom-left'
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
         <p>

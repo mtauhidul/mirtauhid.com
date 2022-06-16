@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import toast from 'react-hot-toast';
 import { Link } from 'react-scroll';
+import { toast } from 'react-toastify';
 import { subscribe } from '../../api/api';
 import Logo from '../../images/logo.png';
 import CtaSection from '../ctaSection/ctaSection';
@@ -8,21 +8,36 @@ import CtaSection from '../ctaSection/ctaSection';
 const Footer = (props) => {
   const [email, setEmail] = useState('');
 
-  const clearForm = () => {
+  const clearForm = (response) => {
     document.getElementById('subscribe-form').reset();
+    if (response) {
+      toast.success('Subscribed successfully!', {
+        position: 'bottom-left',
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      toast.error('Something went wrong! Please try again', {
+        position: 'bottom-left',
+        autoClose: 4000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    }
   };
 
   const SubmitHandler = async (e) => {
     e.preventDefault();
-    clearForm();
 
     const response = await subscribe(email);
-    console.log(response);
-    if (response) {
-      toast.success('Subscribed successfully!');
-    } else {
-      toast.error('Something went wrong! Please try again');
-    }
+    clearForm(response);
   };
 
   return (
@@ -100,22 +115,22 @@ const Footer = (props) => {
                 <ul>
                   <li>
                     <Link to='service' spy={true} smooth={true} duration={500}>
-                      Web Design
+                      Front End Services
                     </Link>
                   </li>
                   <li>
                     <Link to='service' spy={true} smooth={true} duration={500}>
-                      Web Development
+                      Back End Services
                     </Link>
                   </li>
                   <li>
                     <Link to='service' spy={true} smooth={true} duration={500}>
-                      Brand Identity
+                      Full Stack Services
                     </Link>
                   </li>
                   <li>
                     <Link to='service' spy={true} smooth={true} duration={500}>
-                      Digital Marketing
+                      Serverless Services
                     </Link>
                   </li>
                 </ul>
@@ -124,11 +139,11 @@ const Footer = (props) => {
             <div className='col col-lg-3 col-md-6 col-12'>
               <div className='widget newsletter-widget'>
                 <div className='widget-title'>
-                  <h3>Newsletter</h3>
+                  <h3>Subscribe</h3>
                 </div>
                 <p>
-                  Must explain to you how all this mistaken idea pleasure born
-                  and give you a complete account.
+                  Subscribe here to receive notifications about my services and
+                  related information.
                 </p>
                 <form id='subscribe-form' onSubmit={SubmitHandler}>
                   <div className='input-1'>
